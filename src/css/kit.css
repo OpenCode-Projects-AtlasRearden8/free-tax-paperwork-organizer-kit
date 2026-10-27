@@ -1,0 +1,344 @@
+:root {
+  --ink: #2f2318;
+  --muted: #7a6a55;
+  --soft: #5d4f3f;
+  --line: #d8c8b2;
+  --line-strong: #8d7a63;
+  --cut: #b0906c;
+
+  --terra: #b4502a;
+  --terra-deep: #8a3b21;
+  --terra-tint: #f6e2d6;
+
+  --sage: #5c7a4d;
+  --sage-tint: #e7eddd;
+
+  --teal: #33635f;
+  --teal-tint: #dbe8e5;
+
+  --honey: #a07c14;
+  --honey-tint: #f9eecb;
+
+  --cream: #fdf7ec;
+  --cream-warm: #faf2e3;
+
+  --sans: "Atkinson Hyperlegible", "Cabin", "DejaVu Sans", sans-serif;
+  --head: "Cabin", "Atkinson Hyperlegible", "DejaVu Sans", sans-serif;
+  --mono: "Inconsolata", "DejaVu Sans Mono", monospace;
+}
+
+@page {
+  size: Letter;
+  margin: 0.5in 0.55in 0.6in 0.55in;
+}
+
+@page strip {
+  size: Letter landscape;
+  margin: 0.35in 0.4in 0.35in 0.4in;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 10.5pt;
+  line-height: 1.45;
+  color: var(--ink);
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 9.82in;
+}
+
+.sheet-strip {
+  page: strip;
+  display: flex;
+  flex-direction: column;
+  min-height: 7.72in;
+}
+
+body.strip-page-body {
+  min-height: 0;
+  display: block;
+}
+
+.sheet-strip .colophon {
+  margin-top: auto;
+}
+
+.masthead {
+  border-bottom: 2pt solid var(--terra);
+  padding-bottom: 8pt;
+  margin-bottom: 11pt;
+}
+
+.eyebrow {
+  font-family: var(--head);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+  color: var(--terra-deep);
+  margin: 0 0 4pt 0;
+}
+
+h1 {
+  font-family: var(--head);
+  font-size: 20pt;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 5pt 0;
+  color: var(--ink);
+}
+
+.lede {
+  font-size: 10.5pt;
+  color: var(--soft);
+  margin: 0;
+  max-width: 92%;
+}
+
+section {
+  margin-bottom: 10pt;
+}
+
+h2 {
+  font-family: var(--head);
+  font-size: 12.5pt;
+  margin: 0 0 6pt 0;
+  color: var(--terra-deep);
+}
+
+p {
+  margin: 0 0 6pt 0;
+}
+
+ul,
+ol {
+  margin: 0 0 6pt 0;
+  padding-left: 16pt;
+}
+
+li {
+  margin-bottom: 2pt;
+}
+
+.tip {
+  background: var(--honey-tint);
+  border: 1pt solid var(--honey);
+  border-radius: 8pt;
+  padding: 7pt 10pt;
+}
+
+.tip p {
+  margin: 0;
+}
+
+.tip .tip-label {
+  font-family: var(--head);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 1.5pt;
+  text-transform: uppercase;
+  color: var(--honey);
+  margin-bottom: 3pt;
+}
+
+.panel {
+  background: var(--cream);
+  border: 1pt solid var(--line);
+  border-radius: 8pt;
+  padding: 9pt 11pt;
+}
+
+.writein {
+  display: inline-block;
+  border-bottom: 1pt solid var(--line-strong);
+  min-width: 60pt;
+}
+
+.cb {
+  display: inline-block;
+  width: 9pt;
+  height: 9pt;
+  border: 1.3pt solid var(--line-strong);
+  border-radius: 2pt;
+  vertical-align: -0.5pt;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9.5pt;
+}
+
+th {
+  font-family: var(--head);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--soft);
+  border-bottom: 1.5pt solid var(--line-strong);
+  padding: 4pt 6pt;
+}
+
+td {
+  border-bottom: 0.8pt solid var(--line);
+  padding: 4pt 6pt;
+  vertical-align: top;
+}
+
+tr.total-row td {
+  border-top: 1.4pt solid var(--line-strong);
+  border-bottom: 1.4pt solid var(--line-strong);
+  font-weight: 700;
+  background: var(--cream-warm);
+}
+
+.cut {
+  position: relative;
+  border: 1.1pt dashed var(--cut);
+  border-radius: 7pt;
+  padding: 7pt;
+}
+
+.label {
+  border-radius: 7pt;
+  padding: 9pt 10pt;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.label .label-year {
+  font-family: var(--mono);
+  font-size: 8.5pt;
+  color: var(--soft);
+  margin: 0 0 3pt 0;
+}
+
+.label h3 {
+  font-family: var(--head);
+  font-size: 21pt;
+  font-weight: 700;
+  letter-spacing: 1pt;
+  margin: 0 0 5pt 0;
+  line-height: 1.05;
+}
+
+.label .label-what {
+  font-size: 8.5pt;
+  line-height: 1.35;
+  color: var(--soft);
+  margin: 0;
+}
+
+.terra-label { background: var(--terra-tint); border: 1.6pt solid var(--terra); }
+.terra-label h3 { color: var(--terra-deep); }
+
+.sage-label { background: var(--sage-tint); border: 1.6pt solid var(--sage); }
+.sage-label h3 { color: #425d37; }
+
+.teal-label { background: var(--teal-tint); border: 1.6pt solid var(--teal); }
+.teal-label h3 { color: var(--teal); }
+
+.honey-label { background: var(--honey-tint); border: 1.6pt solid var(--honey); }
+.honey-label h3 { color: #7c6112; }
+
+.label.tab {
+  padding: 6pt 8pt;
+}
+
+.label.tab h3 {
+  font-size: 12.5pt;
+  margin-bottom: 3pt;
+}
+
+.label.tab .label-what {
+  font-size: 7.5pt;
+}
+
+table.label-grid td {
+  border: none;
+  padding: 4pt 5pt;
+  vertical-align: top;
+}
+
+table.label-grid td.left-cell { padding-left: 0; }
+table.label-grid td.right-cell { padding-right: 0; }
+
+.strip-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4pt;
+}
+
+.strip-row {
+  display: flex;
+  gap: 4pt;
+}
+
+.strip-row .strip-corner {
+  flex: 0 0 86pt;
+  font-family: var(--head);
+  font-size: 8pt;
+  font-weight: 700;
+  color: var(--soft);
+  display: flex;
+  align-items: center;
+}
+
+.strip-row .strip-cell {
+  flex: 1 1 0;
+  border: 0.8pt solid var(--line);
+  border-radius: 3pt;
+  min-height: 22pt;
+  background: var(--cream);
+  font-size: 6.6pt;
+  line-height: 1.22;
+  padding: 1.5pt 2pt;
+  color: var(--soft);
+}
+
+.strip-row.strip-head .strip-cell {
+  min-height: 26pt;
+  background: var(--cream-warm);
+  border-color: var(--line-strong);
+}
+
+.strip-row .strip-cell.month-feb { background: var(--teal-tint); }
+.strip-row .strip-cell.month-mar { background: var(--sage-tint); }
+.strip-row .strip-cell.month-apr { background: var(--terra-tint); }
+
+.strip-row .strip-cell .milestone {
+  display: block;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.strip-row.write-row .strip-cell {
+  background: #ffffff;
+  border-style: dashed;
+  border-color: var(--line-strong);
+}
+
+.colophon {
+  margin-top: auto;
+  border-top: 1pt solid var(--line);
+  padding-top: 6pt;
+  font-size: 8pt;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+.colophon p {
+  margin: 0;
+}
+
+.colophon .left { padding-right: 14pt; }
