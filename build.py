@@ -3,10 +3,13 @@
 from __future__ import annotations
 
 import argparse
+import os
 import shutil
 import sys
 from dataclasses import dataclass
 from pathlib import Path
+
+os.environ.setdefault("SOURCE_DATE_EPOCH", "1767225600")
 
 from weasyprint import HTML
 

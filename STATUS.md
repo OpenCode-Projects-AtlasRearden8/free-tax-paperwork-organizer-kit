@@ -66,6 +66,9 @@ python3 -m unittest discover -s tests -v    # test suite (pytest also works)
   every page (nothing renders blank); `pdftotext` spot-checks confirm sheet
   content, tips, and footers.
 - `python3 -m py_compile build.py tests/test_build.py` — clean.
+- Reproducible output: `build.py` sets `SOURCE_DATE_EPOCH` when unset, so
+  rebuilding produces byte-identical PDFs (verified with md5sum across two
+  consecutive runs); committed `printables/` artifacts no longer churn.
 
 ## Known gaps
 
